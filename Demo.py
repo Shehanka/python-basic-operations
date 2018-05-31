@@ -1,18 +1,21 @@
 # Python ML program
 
-x = int(input("Input number 1 : "))
-y = int(input("Input number 2 : "))
+import os
+import tensorflow as tf
 
-if x > y:
-    print("Max number : ", x)
-else:
-    print("Max number : ", y)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-print("Sum : ", x + y)
-print("Sub : ", x - y)
-print("Mul : ", x * y)
-print("Div : ", x / y)
-print("Mod : ", x % y)
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))
 
-for i in range(0, 10, 1):
-    print("*"*i)
+a = tf.constant(10)
+b = tf.constant(20)
+
+print(sess.run(a + b))
+
+train_dataset_url = "http://download.tensorflow.org/data/iris_training.csv"
+
+train_dataset_fp = tf.keras.utils.get_file(fname=os.path.basename(train_dataset_url), origin=train_dataset_url)
+
+print("Local copy of the dataset file: {}".format(train_dataset_fp))
