@@ -14,10 +14,10 @@ b = tf.constant(20)
 
 print(sess.run(a + b))
 
-train_dataset_url = "http://download.tensorflow.org/data/iris_training.csv"
+train_dataSet_url = "http://download.tensorflow.org/data/iris_training.csv"
 
-train_dataset_fp = tf.keras.utils.get_file(fname=os.path.basename(train_dataset_url), origin=train_dataset_url)
+train_dataSet_fp = tf.keras.utils.get_file(fname=os.path.basename(train_dataSet_url), origin=train_dataSet_url)
 
-print("Local copy of the dataset file: {}".format(train_dataset_fp))
+print("Local copy of the dataset file: {}".format(train_dataSet_fp))
 
 print("Tensorflow")
