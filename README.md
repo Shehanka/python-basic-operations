@@ -1,2 +1,2 @@
-# python-basic-operations
-This is python basic operations
+# Tensorflow Basics
+This is tensorflow machine learning basic operations
